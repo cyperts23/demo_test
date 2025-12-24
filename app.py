@@ -13,5 +13,11 @@ def welcome():
 def status1():
     return "Status: All systems operational."
 
+
+@app.route("/testdata/mission")
+def some_den():
+    return "Mission: Explore the unknown."
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
