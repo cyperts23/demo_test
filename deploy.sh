@@ -10,11 +10,19 @@ git pull origin main || exit 1
 # Activate virtual environment
 source venv/bin/activate || exit 1
 
+sudo chmod +x run_app.sh || exit 1
+
 # Install/update dependencies
 pip install -r requirements.txt || exit 1
 
-# Restart PM2 app safely
-pm2 restart python-backend || pm2 start run_app.sh --name python-backend --interpreter bash
+
+
+#start PM2 app safely
+pm2 start run_app.sh
+
+#restart pm2 app safely
+pm2 restart run_app.sh
+
 
 # Save PM2 state
 pm2 save
