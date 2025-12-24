@@ -16,8 +16,8 @@ chmod +x run_app.sh
 
 # 3. Update dependencies using the specific venv python
 echo "📦 Updating dependencies..."
-./venv/bin/python -m pip install --upgrade pip
-./venv/bin/python -m pip install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 
 # 4. Handle PM2 (Start or Restart)
 # We use 'pm2 startOrRestart' to handle both new and existing processes
