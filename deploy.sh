@@ -8,7 +8,7 @@ cd /root/pythonbackend || exit 1
 git pull origin main || exit 1
 
 # Activate virtual environment
-source venv/bin/activate || exit 1
+#source venv/bin/activate || exit 1
 
 sudo chmod +x run_app.sh || exit 1
 
